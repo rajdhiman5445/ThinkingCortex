@@ -1,0 +1,28 @@
+{
+  "name": "thinkingcortex",
+  "version": "1.0.0",
+  "description": "Thinking app",
+  "keywords": [
+    "think",
+    "thinking",
+    "cortex"
+  ],
+  "homepage": "https://github.com/rajdhiman5445/ThinkingCortex#readme",
+  "bugs": {
+    "url": "https://github.com/rajdhiman5445/ThinkingCortex/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajdhiman5445/ThinkingCortex.git"
+  },
+  "license": "ISC",
+  "author": "Raj Dhiman",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
