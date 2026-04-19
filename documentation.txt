@@ -1,0 +1,17 @@
+This is a place to take notes. 
+
+// How do Routing works in react? 
+
+Routing is how we map URL path to UI
+using react-router-dom
+
+  Key pieces:
+
+  - BrowserRouter: enables routing based on the browser URL
+  - Routes: container for route matching
+  - Route: defines a path and what component to render
+  - Link: client-side navigation without full page reload
+  - useNavigate(): navigate in code
+  - useParams(): read dynamic route params like /users/:id
+
+Plus, saw how to use Outlet to make child pages
