@@ -1,0 +1,17 @@
+.logo{
+    margin: 0.5rem;
+}
+
+.nav-items ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
