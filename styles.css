@@ -19,6 +19,57 @@ body{
     box-sizing: border-box;
 }
 
+.main-hero {
+      position: relative;
+      overflow: hidden;
+      background: #050707;
+  }
+
+  .main-hero::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      z-index: 0;
+      background:
+          radial-gradient(circle at 30% 15%, rgba(245, 223, 198, 0.85), transparent 22%),
+          radial-gradient(circle at 25% 42%, rgba(0, 115, 95, 0.65), transparent 34%),
+          radial-gradient(circle at 88% 58%, rgba(0, 120, 95, 0.55), transparent 30%),
+          linear-gradient(90deg, #020303 0%, #04100e 45%, #000 62%, #05241f 100%);
+      filter: blur(32px);
+      transform: scale(1.08);
+      animation: gradientDrift 18s ease-in-out infinite alternate;
+  }
+
+ .main-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.18;
+      background-image: repeating-linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.05) 0,
+          rgba(255, 255, 255, 0.05) 1px,
+          transparent 1px,
+          transparent 5px
+      );
+      mix-blend-mode: overlay;
+      pointer-events: none;
+  }
+
+
+    @keyframes gradientDrift {
+      from {
+          transform: scale(1.08) translate3d(-2%, -1%, 0);
+      }
+
+      to {
+          transform: scale(1.15) translate3d(6%, 2%, 1);
+      }
+  }
+
+
+
 .hero-video{
     position: absolute;
     inset: 0;
@@ -26,6 +77,7 @@ body{
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    display: none;
 }
 
 .main-hero > :not(.hero-video):not(.soon){
