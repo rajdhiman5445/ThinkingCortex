@@ -1,5 +1,5 @@
-import HeaderComponent from "./header";
-import { Outlet } from "react-router";
+import HeaderComponent from "./header.jsx";
+import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (

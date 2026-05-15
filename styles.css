@@ -7,18 +7,30 @@ body{
 }
 
 .main-hero{
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(/files/images/background.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     min-height: 100svh;
     padding: 2rem 1rem 1rem;
     text-align: center;
     box-sizing: border-box;
+}
+
+.hero-video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.main-hero > :not(.hero-video):not(.soon){
+    position: relative;
+    z-index: 1;
 }
 
 .title{
@@ -36,6 +48,7 @@ body{
 .soon{
     position: absolute;
     bottom: 1rem;
+    z-index: 1;
     animation: fadeIn 2s ease-in-out infinite alternate;
 }
 

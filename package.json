@@ -17,18 +17,21 @@
   },
   "license": "ISC",
   "author": "Raj Dhiman",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "jest"
-  },
-  "devDependencies": {
-    "parcel": "^2.16.4"
   },
   "dependencies": {
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.13"
   }
 }

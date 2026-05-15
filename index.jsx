@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
-import Home from "./components/home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/home.jsx";
+import heroVideo from "./files/images/output.webm";
 
 const OnboardingComponent = () => {
   return (
     <div className="main-hero">
+      <video className="hero-video" autoPlay muted loop playsInline aria-hidden="true">
+        <source src={heroVideo} type="video/webm" />
+      </video>
       <h1 className="title">The Thinking Cortex</h1>
       <h3 className="subtitle">Thinking Starts Here.</h3>
       <h4 className="soon">Coming Soon</h4>

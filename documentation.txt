@@ -1,5 +1,7 @@
 This is a place to take notes. 
 
+April 20 
+
 // How do Routing works in react? 
 
 Routing is how we map URL path to UI
@@ -15,3 +17,60 @@ using react-router-dom
   - useParams(): read dynamic route params like /users/:id
 
 Plus, saw how to use Outlet to make child pages
+
+12.30 AM
+
+react-router-dom was having some trouble with parcel and the app would not build
+i changed it to import from react-router and now it's working fine
+but it was only a work around and not a clear fix
+
+12.33 AM 
+I created a seperate CSS folder which will have CSS files of all the components
+
+12.47 AM
+
+I forgot to add SPA rewrite file for vercel in vercel.json, and routing wasn't working on the production build
+ {
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
+    ]
+  }
+This is what i needed to write in vercel.json
+it says -> 
+  - for any route like /think or /think/about
+  - serve index.html
+  - let React Router handle the path in the browser
+
+12.59 AM 
+codex resume 019da6ee-8718-7540-b6c8-eb715b85826c
+
+May 15
+
+Added a video background to the landing page.
+
+- CSS background-image can use images like svg/png/jpg, but it cannot play a .webm video.
+- For video backgrounds, use a real <video> element behind the content.
+- The video file is files/images/output.webm.
+- The hero text stays above the video using z-index.
+
+Moved the project from Parcel to Vite.
+
+- Parcel had trouble handling the .webm asset cleanly.
+- Vite works better for this React app and can import video assets directly.
+- The main entry file is now index.jsx instead of index.js.
+- Components with JSX were renamed from .js to .jsx.
+- Vite config lives in vite.config.js.
+
+Useful commands:
+
+- npm run dev: start local Vite dev server
+- npm run build: create production build
+- npm run preview: preview production build locally
+
+Background video import in Vite:
+
+import heroVideo from "./files/images/output.webm";
+
+Then use it in the video source:
+
+<source src={heroVideo} type="video/webm" />
